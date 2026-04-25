@@ -134,7 +134,17 @@ let sumNumStr=numStr1 + numStr2; // This will add the numbers numStr1 and numStr
 // console.log(+" "); // This will convert a string with a space to a number data type, resulting in 0 because a string with only whitespace is considered 0 when using the unary plus operator.
 // console.log(+"Rajiv"); // This will attempt to convert the string "Rajiv" to a number data type, resulting in NaN (Not a Number) because "Rajiv" cannot be converted to a valid number. 
 
-console.log(num2++);// This will print the current value of num2, which is 20, and then increment num2 by 1, resulting in num2 being 21 after this line is executed.
-console.log(num2); // This will print the updated value of num2, which is now 21.
-console.log(++num2); // This will increment num2 by 1 first, resulting in num2 being 22, and then print the updated value of num2, which is 22.
-console.log(num2); // This will print the current value of num2, which is 22.
+// console.log(num2++);// This will print the current value of num2, which is 20, and then increment num2 by 1, resulting in num2 being 21 after this line is executed.
+// console.log(num2); // This will print the updated value of num2, which is now 21.
+// console.log(++num2); // This will increment num2 by 1 first, resulting in num2 being 22, and then print the updated value of num2, which is 22.
+// console.log(num2); // This will print the current value of num2, which is 22.
+
+a=10;
+b=++a; // This will increment a by 1 first, resulting in a being 11, and then assign the updated value of a to b, resulting in b being 11.
+console.log("a: " + a); // This will print "a: 11"
+console.log("b: " + b); // This will print "b: 11"
+
+a=10;
+b=a++; // This will assign the current value of a to b, resulting in b being 10, and then increment a by 1, resulting in a being 11.
+console.log("a: " + a); // This will print "a: 11"
+console.log("b: " + b); // This will print "b: 10"

@@ -1,0 +1,64 @@
+// primitive data types: string, number, boolean, null, undefined, symbol
+// primitive is immutable, non-primitive is mutable.  primitive data types are compared by value
+const score=100
+const score2=100.3
+const isLoggedIn=true
+const outsideTemp=null// data type of null is object, but it represents the absence of any value
+let userEmail; // undefined
+const id=Symbol("123") // symbol is a unique and immutable data type that can be used as an identifier for object properties. Each symbol is guaranteed to be unique, even if they have the same description. This makes symbols useful for creating private properties in objects or for avoiding naming conflicts in large codebases.
+const id2=Symbol("123") // id and id2 are different symbols, even though they have the same description. They are not equal to each other.
+console.log(id === id2); // false
+
+const bigNumber=9007199254740991n // bigInt is a built-in object that provides a way to represent whole numbers larger than 2^53 - 1, which is the largest number that can be safely represented in JavaScript using the Number data type. BigInt values are created by appending "n" to the end of an integer literal or by calling the BigInt() constructor function. BigInt allows for precise representation of large integers without losing precision, making it useful for applications such as cryptography, scientific calculations, and financial applications where large numbers are common.
+console.log(bigNumber); // 9007199254740991n
+console.log(typeof bigNumber); // "bigint"
+
+// java script is a dynamically typed language, which means that variables can hold values of any type and the type can change at runtime. 
+// This allows for flexibility in coding but also requires developers to be mindful of the types of data they are working with to avoid unexpected behavior.
+
+
+// non-primitive data types: object, array, function.  non-primitive data types are compared by reference
+const person={
+    name:"Rajiv",
+    age:30,
+    isMarried:false
+}
+const person2={
+    name:"Rajiv",
+    age:30,
+    isMarried:false
+}
+console.log(person === person2); // false, because they are different objects in memory, even though they have the same properties and values. 
+// In JavaScript, objects are compared by reference, meaning that two objects are considered equal only if they reference the same location in memory. 
+// Since person and person2 are two different objects, they are not equal to each other.
+console.log(typeof person);// "object", because person is an object data type in JavaScript.
+
+
+const numbers=[1, 2, 3, 4, 5]
+const numbers2=[1, 2, 3, 4, 5]
+console.log(numbers === numbers2); // false, because they are different arrays in memory, even though they have the same elements and values. 
+// In JavaScript, arrays are also compared by reference, meaning that two arrays are considered equal only if they reference the same location in memory. 
+// Since numbers and numbers2 are two different arrays, they are not equal to each other.
+console.log(typeof numbers); // "object", because arrays are a type of object in JavaScript.
+
+const myfunction = function() {
+    console.log("Hello, World!");
+}
+const myfunction2 = function() {
+    console.log("Hello, World!");
+}
+console.log(myfunction === myfunction2); // false, because they are different functions in memory, even though they have the same code and behavior. 
+// In JavaScript, functions are also compared by reference, meaning that two functions are considered equal only if they reference the same location in memory. 
+// Since myfunction and myfunction2 are two different functions, they are not equal to each other.
+console.log(typeof myfunction); // "function", because functions are a special type of object in JavaScript.
+
+
+
+
+
+
+// null and undefined are special data types that represent the absence of a value. null is an intentional absence of any object value, while undefined means a variable has been declared but has not yet been assigned a value.
+
+// NaN (Not-a-Number) is a special value that represents an invalid number. It is the result of an undefined or erroneous mathematical operation, such as dividing zero by zero or taking the square root of a negative number. NaN is unique in that it is not equal to itself, meaning that NaN === NaN evaluates to false.
+
+// In JavaScript, the typeof operator is used to determine the type of a variable or expression. It returns a string indicating the type of the operand. For example, typeof "Hello" returns "string", while typeof 42 returns "number". However, there are some quirks in JavaScript's type system, such as typeof null returning "object", which can lead to confusion. It's important to be aware of these quirks when working with data types in JavaScript.
