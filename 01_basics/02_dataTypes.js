@@ -6,6 +6,7 @@
 //1. Primitive data types: These include string, number, boolean, null, undefined, and symbol.
 let name="Rajiv";           // This is a string data type.
 console.log("type of name:", typeof name);              // This will print "string"
+console.log("type of name:", typeof(name));              // This will print "string"
 let age=30;                 // This is a number data type.
 console.log("type of age:", typeof age);                // This will print "number"
 let isMarried=false;        // This is a boolean data type.
