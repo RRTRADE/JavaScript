@@ -37,3 +37,6 @@ console.log(myDate3.setFullYear);//function setFullYear(year: number, month?: nu
 console.log(myDate3.toLocaleDateString('default', {
      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
     }));
+
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
