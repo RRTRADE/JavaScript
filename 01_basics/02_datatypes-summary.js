@@ -17,7 +17,7 @@ console.log(typeof bigNumber); // "bigint"
 // This allows for flexibility in coding but also requires developers to be mindful of the types of data they are working with to avoid unexpected behavior.
 
 
-// non-primitive data types: object, array, function.  non-primitive data types are compared by reference
+// non-primitive(Reference) data types: object, array, function.  non-primitive data types are compared by reference
 const person={
     name:"Rajiv",
     age:30,
@@ -53,12 +53,39 @@ console.log(myfunction === myfunction2); // false, because they are different fu
 console.log(typeof myfunction); // "function", because functions are a special type of object in JavaScript.
 
 
-
-
-
-
 // null and undefined are special data types that represent the absence of a value. null is an intentional absence of any object value, while undefined means a variable has been declared but has not yet been assigned a value.
-
 // NaN (Not-a-Number) is a special value that represents an invalid number. It is the result of an undefined or erroneous mathematical operation, such as dividing zero by zero or taking the square root of a negative number. NaN is unique in that it is not equal to itself, meaning that NaN === NaN evaluates to false.
-
 // In JavaScript, the typeof operator is used to determine the type of a variable or expression. It returns a string indicating the type of the operand. For example, typeof "Hello" returns "string", while typeof 42 returns "number". However, there are some quirks in JavaScript's type system, such as typeof null returning "object", which can lead to confusion. It's important to be aware of these quirks when working with data types in JavaScript.
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(primitive data types) vs Heap(non-primitive data types)
+// In JavaScript, primitive data types (such as string, number, boolean, null, undefined, symbol, and bigInt) are stored in the stack memory. 
+// The stack is a region of memory that is used for storing function calls and local variables.
+// When a primitive value is assigned to a variable, it is stored directly in the stack memory. 
+// This means that when you copy a primitive value from one variable to another, a new copy of the value is created in the stack memory.
+let a=10
+let b=a // b is a copy of a, and they are stored in different locations in the stack memory
+console.log(a); // 10
+console.log(b); // 10
+b=20 // changing the value of b does not affect a, because they are stored in different locations in the stack memory
+console.log(a); // 10
+console.log(b); // 20
+
+// Non-primitive data types (such as objects, arrays, and functions) are stored in the heap memory.
+// The heap is a region of memory that is used for dynamic memory allocation, which means that it can grow and shrink as needed during the execution of a program.
+// When a non-primitive value is assigned to a variable, a reference to the value is stored in the stack memory, while the actual value is stored in the heap memory.
+let obj1={name:"Rajiv", age:30} // obj1 is a reference to the object stored in the heap memory
+let obj2=obj1 // obj2 is a reference to the same object stored in the heap memory, not a copy of it
+console.log(obj1); // {name: "Rajiv", age: 30}
+console.log(obj2); // {name: "Rajiv", age: 30}
+
+obj2.age=31 // changing the value of age in obj2 also changes it in obj1, because they both reference the same object in the heap memory
+console.log(obj1); // {name: "Rajiv", age: 31}
+console.log(obj2); // {name: "Rajiv", age: 31}
+
+// When you copy a non-primitive value from one variable to another, you are copying the reference to the value, not the actual value itself. 
+// This means that if you change the value through one variable, it will affect all variables that reference the same value in the heap memory. 
+// To create a copy of a non-primitive value, you can use techniques such as object spread syntax, Object.assign(), or array methods like slice() for arrays.
+
