@@ -13,4 +13,4 @@ console.log(MyHeros[2]); //Spiderman
 const myArr2=new Array(1,2,3,4,5);
 
 console.log(myArr2); //[1, 2, 3, 4, 5]
-console.log(myArr2[2]); //3
+console.log(myArr2[2]); //3  
