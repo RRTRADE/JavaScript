@@ -36,8 +36,17 @@ console.log(JsUser);
 // JsUser.name="Divansh Ranjan"
 // console.log(JsUser); // no change in name
 
-Object.seal(JsUser) //seal the object - changes allowed but no new properties can be added
+// Object.seal(JsUser) //seal the object - changes allowed but no new properties can be added
 // JsUser.name="Divansh Ranjan"
 // JsUser.newProp="New Property"
 // console.log(JsUser); // name changed but newProp not added
 
+JsUser.greeting=function(){
+    console.log("Hello Users");
+}
+JsUser.greetingTwo=function(){
+    console.log(`Hello Users, ${this["Full Name"]}`);
+}
+
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());
