@@ -22,25 +22,41 @@ const regularUser={
     }
 }
 
-console.log(regularUser.fullname.userfullname.lastname);
+// console.log(regularUser.fullname.userfullname.lastname);
 
 const target={ 1:"a", 2:"b"}
 const source={ 2:"c", 5:"n"}
 const mergeTarget=Object.assign(target,source)
-console.log(mergeTarget);   //{ '1': 'a', '2': 'c', '5': 'n' }
-console.log(target);        //{ '1': 'a', '2': 'c', '5': 'n' }
+// console.log(mergeTarget);   //{ '1': 'a', '2': 'c', '5': 'n' }
+// console.log(target);        //{ '1': 'a', '2': 'c', '5': 'n' }
 
-console.log(target===mergeTarget)//true
+// console.log(target===mergeTarget)//true
 
 
 //club multipl objects into one
 const middle={ 5:"d", 6:"h"}
 const final=Object.assign({},source,target,middle); //all club into final
-console.log(final); //{ '1': 'a', '2': 'c', '5': 'd', '6': 'h' }
+// console.log(final); //{ '1': 'a', '2': 'c', '5': 'd', '6': 'h' }
 
 //Spread objects.
 const final1={...source,...final,...target}
-console.log(final1);//{ '1': 'a', '2': 'c', '5': 'd', '6': 'h' }
+// console.log(final1);//{ '1': 'a', '2': 'c', '5': 'd', '6': 'h' }
+
+const users=[
+    {userId:1, name:"Divyansh"},
+    {userId:2, name:"Rohit"},
+    {userId:3, name:"Rahul"}
+]
+
+users[1].name="Rohit Sharma"
+// console.log(users); //[ { userId: 1, name: 'Divyansh' }, { userId: 2, name: 'Rohit Sharma' }, { userId: 3, name: 'Rahul' } ]
 
 
+// console.log(tinderUser)
 
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+
+// console.log(tinderUser.hasOwnProperty("name"));//true
+// console.log(tinderUser.hasOwnProperty("age"));//false
