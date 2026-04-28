@@ -59,7 +59,7 @@ return `Welcome back ${username}`
 // console.log(loginUserMessage1("Divyansh")); //Welcome back Divyansh
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ REST OPERATOR IN FUNCTION PARAMETER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//rest operator in function parameter
+//... rest operator in function parameter
 function sumAllNums(...nums){
     console.log(nums); // will return an array of all the arguments passed to the function [ 1, 2, 3, 4, 5 ]
     let total=0;
@@ -84,7 +84,11 @@ function userDetails(anyObject){
 
 userDetails(myUser); //Username is Divyansh and email is divyansh@example.com and score is 100
 //We can also pass object directly without storing it in a variable
-userDetails({username:"Rohit", email:"rohit@example.com", score:200}); //Username is Rohit and email is rohit@example.com and score is 200
+userDetails({
+    username:"Rohit", 
+    email:"rohit@example.com", 
+    score:200
+}); //Username is Rohit and email is rohit@example.com and score is 200
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Passing Array as an argument to a function ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -97,3 +101,4 @@ function print2ndvalueArray(getArray){
 console.log(print2ndvalueArray(myArr)); //2
 //We can also pass array directly without storing it in a variable
 console.log(print2ndvalueArray([10,20,30,40,50])); //20
+
